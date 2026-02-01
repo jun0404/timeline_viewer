@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeline Viewer - Schedule Manager</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128197;</text></svg>">
+</head>
+<body>
+  <!-- Top Toolbar -->
+  <header class="toolbar">
+    <div class="toolbar-left">
+      <h1>Timeline Viewer</h1>
+    </div>
+    <div class="toolbar-center">
+      <button id="btn-add-task" title="Add new task (N)">+ Task</button>
+      <button id="btn-add-conference" title="Add new conference (C)">+ Conference</button>
+      <button id="btn-undo" title="Undo (Ctrl+Z)">&#8630; Undo</button>
+      <button id="btn-redo" title="Redo (Ctrl+Shift+Z)">&#8631; Redo</button>
+    </div>
+    <div class="toolbar-right">
+      <button id="btn-history" title="View change history (H)">History</button>
+      <button id="btn-settings" title="Open settings (S)">Settings</button>
+      <button id="btn-import" title="Import data from JSON file">Import</button>
+      <button id="btn-export" title="Export data as JSON file">Export</button>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <div id="timeline-container" class="timeline-container">
+      <!-- Timeline table rendered by JS -->
+    </div>
+  </main>
+
+  <!-- Legend Panel (right side) -->
+  <aside id="legend-panel" class="legend-panel">
+    <!-- Legend rendered by JS -->
+  </aside>
+
+  <!-- Modal Overlay -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div id="modal-content" class="modal-content">
+      <!-- Modal content rendered dynamically -->
+    </div>
+  </div>
+
+  <!-- History Side Panel -->
+  <div id="history-panel" class="side-panel hidden">
+    <!-- History content rendered by JS -->
+  </div>
+
+  <!-- Settings Side Panel -->
+  <div id="settings-panel" class="side-panel hidden">
+    <!-- Settings content rendered by JS -->
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
